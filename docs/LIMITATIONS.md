@@ -1,0 +1,23 @@
+# Known limitations and honest scope
+
+- Browser acceptance is PASS_WITH_LIMITATIONS in the tested Windows Chromium 153 in-app browser. The built-in sketch, mouse calibration/tracing, actual recipe export Blob, Python build, mesh-file import, part selection, keyboard view controls and drag interaction were exercised. Native download saving was not verified; see evidence/VALIDATION.md.
+- The tested embedded browser could read metadata for one selected local file but initially failed to read its contents with `NotReadableError`. A byte-identical copy in a browser-readable temporary location succeeded without permission changes. Other browsers' file/download behaviour is not established by this result.
+- Blender 4.5.14 LTS background export and reopen passed for two different synthetic scenes. Interactive GUI editing and compatibility with other Blender versions remain untested.
+- No real customer product photos were used for external accuracy validation. Examples are synthetic.
+- No automatic contour extraction, image segmentation or AI reconstruction exists in this release.
+- Manual trace is piecewise linear and needs both sides of a material cross-section. It is not the former full section editor.
+- The generated shape is axisymmetric. Local tabs, embossed text, vents, honeycomb and hinges are not reconstructed.
+- The tapered preset is one idealized straight-wall shape, not a universal product template.
+- Explicit section mode does not enforce a constant wall thickness. User input defines it.
+- No capacity, lid compatibility, leakage, food safety, tooling, tolerance or engineering performance certification.
+- A report's material volume is solid-plastic volume, not the interior fill volume.
+- Viewer is intentionally simple, opaque and lacks physically based translucent materials, fine lighting and production interaction features.
+- Viewer accepts at most 65,535 vertices per part, 150,000 total and a 20 MB JSON input. CLI permits larger bounded combinations; use fewer segments for this preview.
+- Image input is bounded at 10 MB and checked at 20 megapixels after decoding. This is not a hardened image-decoding sandbox. Use trusted local files.
+- Mesh topology checks are not an exhaustive computational-geometry proof for all floating point edge cases.
+- New output directories are protected against overwrite. On an IO error during final placement, a partial new output may remain for diagnosis; this is not a universal filesystem transaction guarantee.
+- The current core and Blender validation ran on Windows 11. No Safari, Firefox, Android or actual iPhone hardware test is claimed. A responsive viewport check, if recorded, is not a physical-device test.
+- Desktop 934 × 794 and mobile-emulated 390 × 844 layouts passed the observed overflow/column checks. No-WebGL fallback and actual context-loss recovery were tested. These do not establish accessibility compliance or stability on all graphics hardware.
+- The observed interaction network contained only localhost GETs and local blob events, with no POST or external-origin requests. This is evidence for the tested window, not a permanent network-security guarantee for modified code or future browser versions.
+- Search-engine indexing remains UNKNOWN. Public repository availability does not establish indexing or ranking.
+- This is an alpha, not a production-ready modelling or engineering system. Future releases still require the release checklist; use the private reporting route in SECURITY.md for vulnerabilities.

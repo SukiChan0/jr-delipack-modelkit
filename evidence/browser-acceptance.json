@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "project": "JR Delipack ModelKit",
+  "version": "0.1.0-alpha.2",
+  "date": "2026-09-24",
+  "overall": "PASS_WITH_LIMITATIONS",
+  "environment": {"os": "Windows 11", "browser": "Chromium 153 in-app browser", "desktop_viewport_css_px": [934, 794], "emulated_mobile_viewport_css_px": [390, 844]},
+  "scope": "Local synthetic data only. Browser checks were performed against the working source used to prepare this candidate, not a deployed website.",
+  "checks": [
+    {"id": "manual_trace", "result": "PASS", "method": "Actual mouse calibration on the built-in invented drawing and six material-boundary points; actual export Blob contents captured, then built by the Python CLI and selected as mesh.json in the browser.", "parts_loaded": 1},
+    {"id": "native_download_save", "result": "NOT_VERIFIED", "detail": "The download-event observer timed out after 10 seconds. The exported Blob payload was verified; filesystem save completion was not."},
+    {"id": "local_file_read", "result": "PASS_WITH_LIMITATION", "detail": "An initially selected file exposed metadata but File.text failed with NotReadableError. A byte-identical copy in a browser-readable temporary location loaded successfully. No filesystem or security permissions were changed."},
+    {"id": "mesh_controls", "result": "PASS", "detail": "Two parts loaded; all/individual selection, keyboard yaw and zoom, reset and mouse-drag orbit exercised. Keyboard zoom changed from 1 to 1.05."},
+    {"id": "input_rejection", "result": "PASS", "cases": ["Invalid JSON", "Empty mesh parts", "Mesh file above 20 MiB", "Undecodable PNG", "Image above 10 MiB", "5001 by 4000 image above 20 megapixels"], "recovery": "Valid image and mesh loaded after failures."},
+    {"id": "rendering", "result": "PASS_FOR_OBSERVED_SCENE", "detail": "Default positive pitch showed the bowl cavity after view-depth correction. Linear-to-sRGB display mapping made dark illustrative surfaces readable. Built-in drawing labels were visible after fill-colour correction. This is not photorealistic material or shader-conformance certification."},
+    {"id": "mobile_emulation", "result": "PASS", "detail": "At 390 by 844 CSS pixels, document width was 375 with no horizontal overflow and a single-column layout; part selection and keyboard zoom worked; observed WebGL error code was zero. Physical touch hardware was not tested."},
+    {"id": "keyboard_numeric_alternative", "result": "PASS_FOR_TESTED_CONTROLS", "detail": "Enter opened the numeric-alternative details; native part and range controls worked. Not a complete accessibility audit."},
+    {"id": "webgl_unavailable", "result": "PASS_CONTROLLED_FAULT", "detail": "Local test instrumentation returned null for the viewer WebGL context and verified the fallback message. Instrumentation was removed and the page reloaded."},
+    {"id": "webgl_context_loss", "result": "PASS", "detail": "WEBGL_lose_context produced the expected context-loss message. Reload restored the viewer."},
+    {"id": "network_observation", "result": "PASS_FOR_OBSERVED_WINDOW", "request_events": 20, "localhost_http_gets": 17, "local_blob_events": 3, "external_origin_requests": 0, "post_requests": 0, "production_resource_requests": 0, "detail": "The window included same-origin fault-test script loading. This is not a claim about unobserved actions or other applications."},
+    {"id": "branding", "result": "PASS", "heading": "JR Delipack ModelKit", "page_title": "JR Delipack ModelKit — local tracing and mesh preview"}
+  ],
+  "cleanup": {"temporary_viewport_override": "RESET", "local_tab_cache_override": "RESET", "page_test_instrumentation": "REMOVED_BY_RELOAD"},
+  "not_tested": ["Physical mobile devices", "Safari or Firefox", "Real product photographs", "Commercial SKU accuracy", "Lid fit or container capacity", "Actual public repository or production deployment"],
+  "web_contract_regression": {"runtime": "Node.js v24.19.0", "test_file": "tests/test_web_contract.mjs", "passed": 10, "failed": 0, "scope": "Separate static source contracts and reference mathematics, not additional browser execution tests."}
+}

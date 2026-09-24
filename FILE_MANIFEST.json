@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "project": "JR Delipack ModelKit",
+  "version": "0.1.0-alpha.2",
+  "scope": "REVIEWED_PUBLIC_CANDIDATE_NOT_PUBLICATION_APPROVAL",
+  "code_and_docs_license": "GPL-3.0-or-later",
+  "synthetic_examples_license": "CC0-1.0",
+  "excludes_self_hash": "FILE_MANIFEST.json is generated from the listed public files and cannot hash itself. Its digest is supplied in the separate local release report.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 333,
+      "sha256": "4b6a44b9923b7aa0dc8d4aae415f999df5b4210f02a18a6561ae25b10a69e347"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1352,
+      "sha256": "dde5bf5f84daba4f9a1baf60283700b272075b82819ddc8439eae0fc620bb6af"
+    },
+    {
+      "path": "blender/export_scene.py",
+      "bytes": 3165,
+      "sha256": "f0522d6f3ce686561deeee4373fd94a4c7a45fac4da55eff6c8e2fbcc0ac4672"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1036,
+      "sha256": "d6ddec824263ff4d76bb49b92c1191578fab1a9dbd79552d19a6ef2e182bdca9"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1767,
+      "sha256": "57e79978e83f57d88cacfa0a153101b2d235a8400d8789c9bd9f1dd2b35f5848"
+    },
+    {
+      "path": "docs/INPUT_FORMAT.md",
+      "bytes": 3944,
+      "sha256": "d9c88780122cb79a122e0122c6c2756078c7f085965ee8ce6334c56c783e1e73"
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "bytes": 3518,
+      "sha256": "6754afcdf401a013ccc24926a058805a6e5df9d2ec338326dba1931e96f9b566"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "bytes": 2908,
+      "sha256": "00b917ae9d36f01b41d9036bc87c3237fc39cf0d16c12a72ea86b1f8fc2bd7a1"
+    },
+    {
+      "path": "evidence/blender-acceptance.json",
+      "bytes": 5312,
+      "sha256": "10ba35dcbc037dfd861fb0bc0536e4a6ca9d729781337f9808d1267c23447dbc"
+    },
+    {
+      "path": "evidence/browser-acceptance.json",
+      "bytes": 4122,
+      "sha256": "8ebf85c348662fed467016ec2a44b2ad65cc9da26c0bfc8f20b91fef5d6a9954"
+    },
+    {
+      "path": "evidence/core-acceptance.json",
+      "bytes": 5128,
+      "sha256": "3d0999df951275e3648f39c6e151f99e7b3597bf781b26c9994db5cc1a6f8af8"
+    },
+    {
+      "path": "evidence/independent-mesh-check.json",
+      "bytes": 1368,
+      "sha256": "5e1b5aaafaaa33ef7209f8e3d903d42ee0a85662402fbdfc5294795d1946c652"
+    },
+    {
+      "path": "evidence/VALIDATION.md",
+      "bytes": 6385,
+      "sha256": "dcdecec9d97d043b08d9608d701abf23897159c9a3351abcfd9657f324927d3f"
+    },
+    {
+      "path": "examples/custom_generated/mesh.json",
+      "bytes": 182844,
+      "sha256": "b9187a2dc2cd7b7090e2a383329be76696a21aae78c159c163f8239d57186c31"
+    },
+    {
+      "path": "examples/custom_generated/model.glb",
+      "bytes": 25696,
+      "sha256": "770653ebb91c1e2a4de278dfc0734160b0b951be705cee1240ba6ca4ad9cf020"
+    },
+    {
+      "path": "examples/custom_generated/model.obj",
+      "bytes": 29358,
+      "sha256": "419095cf2994b9de9c91563a349bf39adaacdecd1a878be60f97f6d46c3263e6"
+    },
+    {
+      "path": "examples/custom_generated/recipe.resolved.json",
+      "bytes": 1021,
+      "sha256": "e2c91afe1eb78a28b4c3522380ef9b9d5022258141a75243fb3685efcecd7204"
+    },
+    {
+      "path": "examples/custom_generated/report.json",
+      "bytes": 896,
+      "sha256": "50883c9faacbac5eaa913babc355222da8e9e2332f3b1146224e7cbb6728b395"
+    },
+    {
+      "path": "examples/demo_custom_section.json",
+      "bytes": 860,
+      "sha256": "d4a3b0c95b98a4282e5ed1d5c27cc2b9df21b8305d79533a5f72b47fe40742cf"
+    },
+    {
+      "path": "examples/demo_set.json",
+      "bytes": 780,
+      "sha256": "15f3231b4545e6312c23e6afb8807d4fa5e886471447c8cfa7b55f108403320e"
+    },
+    {
+      "path": "examples/generated/mesh.json",
+      "bytes": 411728,
+      "sha256": "971dfa1fd6bc907b01bf750939317bfa0edb52b90fd1b5744b8dca7357305582"
+    },
+    {
+      "path": "examples/generated/model.glb",
+      "bytes": 57204,
+      "sha256": "39f564eb12982b675da5035ddcda374a957369f7a93ca7a7ce21e55cccffd7ad"
+    },
+    {
+      "path": "examples/generated/model.obj",
+      "bytes": 67914,
+      "sha256": "de890844db348880a9297dd9558135954607d0c7e096622530dec0e201432145"
+    },
+    {
+      "path": "examples/generated/recipe.resolved.json",
+      "bytes": 1631,
+      "sha256": "a2ea627d4b52fb79f7d399f5274bf53749e1cc6555cb9ad892f444419fc09b22"
+    },
+    {
+      "path": "examples/generated/report.json",
+      "bytes": 1435,
+      "sha256": "341c55ef64366137b1d03bd4abfee7b49b7f39a62f0a0b6208559dcd5b4c9407"
+    },
+    {
+      "path": "examples/independent_synthetic.json",
+      "bytes": 987,
+      "sha256": "c723f1fa31d68aba5c5b37481f245a7d8e66fd8e95b5956576dba0e9331d091f"
+    },
+    {
+      "path": "examples/LICENSE.md",
+      "bytes": 722,
+      "sha256": "14c10e8a75bcf08a1e306770b78486599d9f31cdca889c60aa80991f27d0d8e2"
+    },
+    {
+      "path": "jr_modelkit/__init__.py",
+      "bytes": 149,
+      "sha256": "259555a849ad3037b5a5df87302e1b893fb65b824a0ad47f075bdad8541d227c"
+    },
+    {
+      "path": "jr_modelkit/__main__.py",
+      "bytes": 4079,
+      "sha256": "d38ec22c6a0b79f346667add8cf34454ddd66a0d2963a73fb3c09510164d20e3"
+    },
+    {
+      "path": "jr_modelkit/exporters.py",
+      "bytes": 3098,
+      "sha256": "750135e8b0bd8ebbbab84167055e63dd3af5fe84795fe004cb90d54f3f71eee2"
+    },
+    {
+      "path": "jr_modelkit/geometry.py",
+      "bytes": 9820,
+      "sha256": "9c52ed321349ede9b1300c285a953f69af91b58236263e3ca7974268d717c8be"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "LICENSES/CC0-1.0.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8345,
+      "sha256": "06f4423a8a813215f6b18be2ec1ae1367ad87196c07cfd8bb373b0fead03762a"
+    },
+    {
+      "path": "release/PUBLIC_EXPORT_RULES.md",
+      "bytes": 1699,
+      "sha256": "35c93d9f3caf79c01959a46d3187a5baa6afa64f529a366a2363fb5f6dfc638e"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1855,
+      "sha256": "41a297faf89c805a92c57873ed771876014b01b8f46c537bcf95c6dc22aa638d"
+    },
+    {
+      "path": "tests/test_modelkit.py",
+      "bytes": 8538,
+      "sha256": "ffe2a71255a1495b34ccc422de48ab0461da336100e7e1611777d602784c3573"
+    },
+    {
+      "path": "tests/test_web_contract.mjs",
+      "bytes": 6896,
+      "sha256": "f1b2251819f1bb1a0053c31573d2bf39b5c516acafbc674dbd2a9ac0b94c25b6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1927,
+      "sha256": "e0ea2d08f776239f198314296c156110a5031fa1aec4a633c05da2072259d6b2"
+    },
+    {
+      "path": "tools/audit_github_html.py",
+      "bytes": 2906,
+      "sha256": "a701cbdc911856c3608e061131fc615ea99e98ec14e27181c4e4608331e106f2"
+    },
+    {
+      "path": "tools/independent_mesh_check.py",
+      "bytes": 1545,
+      "sha256": "5a3cb3f0e46480a1c5b04c3d498c0ea1e589517c68029bb3ff20592eb5d04070"
+    },
+    {
+      "path": "TRADEMARKS.md",
+      "bytes": 596,
+      "sha256": "d6e8d3501ec6c2878f4ee2c20223aca707ccdef2655c238ebbfd3baa4eecd9b1"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 6049,
+      "sha256": "8b844f526cb38b4533ee56abc9d16e3ce4f2b30bc188188493de019f64ab86e0"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 3914,
+      "sha256": "1f2f5fada948c961ffc2f7caa996a27ed5a0485aeeef817d678ccf9d0df5ce16"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 1500,
+      "sha256": "3bdc3781ecabedc6eacabd6b18337282790364314b093e625dabcbd145b99353"
+    },
+    {
+      "path": "web/viewer.js",
+      "bytes": 7300,
+      "sha256": "3326884a81bba35473b19c968fdebddbb678a414e3b4b719975327e636cd07f0"
+    }
+  ]
+}

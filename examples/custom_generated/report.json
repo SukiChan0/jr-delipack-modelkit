@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0-alpha.2",
+  "recipe_sha256": "13799de50dfa4a37beb0204e3a291cfa38f769ccb0894fc4ae78bfad4c16af9c",
+  "input_units": "mm",
+  "obj_units": "mm",
+  "glb_units": "metres",
+  "photo_reconstruction": "NOT_IMPLEMENTED",
+  "fit_validation": "NOT_IMPLEMENTED",
+  "manufacturing_validation": "NOT_IMPLEMENTED",
+  "parts": [
+    {
+      "id": "section_bowl",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "bounds_mm": [
+        [
+          -68.0,
+          -68.0,
+          0.0
+        ],
+        [
+          68.0,
+          68.0,
+          40.0
+        ]
+      ],
+      "position_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "closed_material_surface": true,
+      "material_volume_mm3": 37116.59225917497,
+      "vertices": 514,
+      "triangles": 1024,
+      "note": "material volume is NOT usable container capacity"
+    }
+  ]
+}

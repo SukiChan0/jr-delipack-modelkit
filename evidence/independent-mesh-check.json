@@ -1,0 +1,51 @@
+{
+  "checker": "trimesh 4.11.1",
+  "status": "PASS",
+  "scope": "Two synthetic fixtures; GLB and OBJ parse; individual GLB material topology and local metric extents",
+  "official_gltf_validator": "NOT_RUN",
+  "physical_accuracy": "NOT_TESTED",
+  "records": [
+    {
+      "fixture": "generated",
+      "part": "demo_bowl",
+      "vertices": 386,
+      "triangles": 768,
+      "closed_material_surface": true,
+      "winding_consistent": true,
+      "material_volume_m3": 4.05232975846296e-05,
+      "extents_local_metres": [
+        0.1599999964237213,
+        0.04800000041723251,
+        0.1599999964237213
+      ]
+    },
+    {
+      "fixture": "generated",
+      "part": "demo_lid",
+      "vertices": 770,
+      "triangles": 1536,
+      "closed_material_surface": true,
+      "winding_consistent": true,
+      "material_volume_m3": 2.9230012160787e-05,
+      "extents_local_metres": [
+        0.164000004529953,
+        0.00800000037997961,
+        0.164000004529953
+      ]
+    },
+    {
+      "fixture": "custom_generated",
+      "part": "section_bowl",
+      "vertices": 514,
+      "triangles": 1024,
+      "closed_material_surface": true,
+      "winding_consistent": true,
+      "material_volume_m3": 3.7116594619472674e-05,
+      "extents_local_metres": [
+        0.13600000739097595,
+        0.03999999910593033,
+        0.13600000739097595
+      ]
+    }
+  ]
+}

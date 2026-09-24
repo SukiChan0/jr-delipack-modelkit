@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src blob: data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>JR Delipack ModelKit — local tracing and mesh preview</title>
+<link rel="stylesheet" href="style.css">
+<script src="viewer.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header><span class="eyebrow">LOCAL • ALPHA • NO UPLOAD</span><h1>JR Delipack ModelKit</h1>
+<p>Photo-assisted rotational modelling. This is manual reference tracing, not automatic photo reconstruction.</p>
+<a href="https://jrdelipack.com/" target="_blank" rel="noopener noreferrer">Project background: JR DELIPACK</a></header>
+<main>
+<section>
+<h2>1. Reference and material half-section</h2>
+<p>Use a side-on reference or a simple section drawing. A photo does not reveal hidden inner walls. Supply or draw those explicitly; do not infer precision from pixels.</p>
+<div class="controls"><label>Reference image (local only, PNG/JPEG/WebP, up to 10 MB)<input id="photo" type="file" accept="image/png,image/jpeg,image/webp"></label>
+<button id="synthetic">Use invented example drawing</button></div>
+<div class="controls"><label>Known calibration height (mm)<input id="height" type="number" min="1" max="1000" step="0.1" value="48"></label>
+<label>Part ID<input id="partId" value="traced_part" maxlength="48"></label>
+<label>Traced side<select id="side"><option value="1">Right of axis</option><option value="-1">Left of axis</option></select></label></div>
+<div class="controls"><button id="calibrate">Set axis: bottom, then top</button><button id="undo">Undo last trace point</button><button id="clear">Clear trace</button><button id="export">Download recipe JSON</button></div>
+<p id="traceStatus" role="status" aria-live="polite">Load a reference. Set two axis points, then trace a CLOSED material boundary.</p>
+<canvas id="trace" width="900" height="560" aria-label="Manual material section tracing canvas"></canvas>
+<p class="small">Trace outside bottom → outside wall → rim → inside wall → inside floor → axis, then export. Closure is automatic. Use both inner and outer paths, not just a silhouette. R is radius, not diameter. More complex wall offsets, snap fit and photographic calibration are not validated here.</p>
+<details><summary>Keyboard-accessible numeric alternative</summary><p>The Python recipe accepts explicit [radius_mm, height_mm] points or a tapered-bowl preset. Canvas clicking is optional. See docs/INPUT_FORMAT.md and examples/demo_set.json.</p></details>
+</section>
+<section>
+<h2>2. Inspect generated mesh</h2>
+<p>Run the local Python build, then load its <code>mesh.json</code>. Drag to orbit; use the zoom slider. This viewer is not a fit, material or capacity test.</p>
+<label>Generated mesh JSON (up to 20 MB)<input id="mesh" type="file" accept="application/json,.json"></label>
+<div class="controls"><label>Show<select id="part"><option value="all">All parts</option></select></label><label>Yaw<input id="yaw" type="range" min="-180" max="180" value="-30"></label><label>Pitch<input id="pitch" type="range" min="-85" max="85" value="55"></label><label>Zoom<input id="zoom" type="range" min="0.4" max="3" step="0.05" value="1"></label><button id="reset">Reset view</button></div>
+<canvas id="view" width="900" height="600" aria-label="3D mesh viewer"></canvas>
+<p id="viewStatus" role="status" aria-live="polite">Choose generated mesh.json. No models are fetched from the production website.</p>
+</section>
+</main>
+<footer>Source, samples and limitations: see the repository README. No analytics, login, cloud inference or real quotation endpoint. Brand reference does not certify the generated geometry.</footer>
+</body></html>

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "project": "JR Delipack ModelKit",
+  "version": "0.1.0-alpha.2",
+  "status": "PASS_FOR_RECORDED_LOCAL_CORE_CHECKS",
+  "recorded_at_utc": "2026-09-23T21:08:59.707384+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "operating_system": "Windows 11 build 26200",
+    "additional_python_packages_required_for_these_checks": 0
+  },
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 39,
+    "total": 39,
+    "suite_reported_seconds": 0.270,
+    "original_alpha_1_tests_passed_before_changes": 35
+  },
+  "scope": {
+    "successful_distinct_synthetic_recipes": 3,
+    "independently_authored_recipes": 1,
+    "parts_read_back_in_both_glb_and_obj": 6,
+    "malformed_input_cases_rejected_with_structured_exit_2_and_no_output": 13,
+    "existing_output_overwrite_attempts_rejected_with_hashes_unchanged": 3,
+    "limit_checks_passed": 2,
+    "source_kind": "INVENTED_NONCOMMERCIAL_TEACHING_GEOMETRY"
+  },
+  "readback_method": {
+    "implementation": "Independent Python standard-library GLB and OBJ parsers, separate from the geometry/exporter implementation",
+    "checked": [
+      "GLB magic, version, total length and aligned JSON/BIN chunks",
+      "buffer/accessor bounds, component counts and triangle indices",
+      "named part separation and node translations",
+      "millimetre Z-up to metre Y-up coordinate conversion",
+      "OBJ names, transformed positions and matching triangle topology",
+      "finite vertices and non-degenerate triangles",
+      "two incident faces per material edge and consistent winding",
+      "positive signed material volume",
+      "GLB unit-length vertex normals"
+    ],
+    "official_khronos_gltf_validator": "NOT_RUN"
+  },
+  "units": {
+    "input_and_mesh_json": "millimetres, Z-up",
+    "obj": "millimetres, Z-up",
+    "glb": "metres, Y-up",
+    "glb_coordinate_map": "(x,y,z) -> (x,z,-y)/1000",
+    "reported_material_volume": "solid material volume, not usable container capacity"
+  },
+  "observed_serialization_differences": {
+    "maximum_obj_coordinate_difference_mm": 4.946612364165048e-7,
+    "maximum_glb_coordinate_difference_mm": 3.6954879760742188e-6,
+    "maximum_glb_normal_unit_length_difference": 4.439969014669032e-8,
+    "comparison_reference": "Generated numerical mesh coordinates, not measurements from a photo or real object",
+    "is_photo_measurement_accuracy": false
+  },
+  "mesh_records": [
+    {
+      "fixture": "demo_set",
+      "part": "demo_bowl",
+      "vertices": 386,
+      "triangles": 768,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 2
+    },
+    {
+      "fixture": "demo_set",
+      "part": "demo_lid",
+      "vertices": 770,
+      "triangles": 1536,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 2
+    },
+    {
+      "fixture": "demo_custom_section",
+      "part": "section_bowl",
+      "vertices": 514,
+      "triangles": 1024,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 2
+    },
+    {
+      "fixture": "independently_authored_synthetic",
+      "part": "audit_tall_bowl",
+      "vertices": 322,
+      "triangles": 640,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 2
+    },
+    {
+      "fixture": "independently_authored_synthetic",
+      "part": "audit_floating_ring",
+      "vertices": 320,
+      "triangles": 640,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 0
+    },
+    {
+      "fixture": "independently_authored_synthetic",
+      "part": "audit_stepped_cap",
+      "vertices": 642,
+      "triangles": 1280,
+      "closed_material_surface": true,
+      "consistent_outward_winding": true,
+      "euler_characteristic": 2
+    }
+  ],
+  "limit_checks": [
+    {
+      "case": "one_part_256_section_points_256_segments",
+      "status": "PASS",
+      "vertices": 65536,
+      "triangles": 131072,
+      "browser_preview_eligible": false,
+      "note": "The separately documented browser limit is 65535 vertices per part. This core boundary case deliberately exceeds that preview limit."
+    },
+    {
+      "case": "eight_parts_24_segments",
+      "status": "PASS"
+    }
+  ],
+  "repairs_checked": [
+    "Oversized integer conversion now produces ModelError instead of uncaught OverflowError.",
+    "Non-string source_status now produces ModelError instead of uncaught TypeError.",
+    "GLB generator and OBJ comments identify JR Delipack ModelKit; GLB version derives from the package version."
+  ],
+  "limitations": {
+    "automatic_photo_reconstruction": "NOT_IMPLEMENTED",
+    "real_photo_accuracy": "NOT_TESTED",
+    "physical_fit_capacity_or_food_contact_certification": "NOT_PROVIDED",
+    "simultaneously_maximal_eight_part_workload": "NOT_STRESS_TESTED",
+    "browser_acceptance": "NOT_CLAIMED_BY_THIS_CORE_REPORT",
+    "blender_acceptance": "NOT_CLAIMED_BY_THIS_CORE_REPORT",
+    "publication_approval": "NOT_GRANTED_BY_THIS_REPORT"
+  }
+}

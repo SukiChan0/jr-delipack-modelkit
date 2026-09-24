@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "segments": 64,
+  "parts": [
+    {
+      "id": "section_bowl",
+      "section_rz_mm": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          38.0,
+          0.0
+        ],
+        [
+          43.0,
+          6.0
+        ],
+        [
+          64.0,
+          38.0
+        ],
+        [
+          68.0,
+          38.0
+        ],
+        [
+          68.0,
+          40.0
+        ],
+        [
+          62.5,
+          40.0
+        ],
+        [
+          41.8,
+          6.5
+        ],
+        [
+          36.8,
+          1.5
+        ],
+        [
+          0.0,
+          1.5
+        ]
+      ],
+      "position_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color": [
+        0.3,
+        0.4,
+        0.45
+      ],
+      "source_status": "SYNTHETIC_EXAMPLE"
+    }
+  ],
+  "notes": "Second independent invented explicit-section teaching fixture. No product or constant-thickness claim."
+}

@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+build/
+private/
+user-inputs/
+photos/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.blend1
+.DS_Store
+Thumbs.db
+
+# Owner handoff and local repository/permission records; not public project source
+/CODEX_START_HERE.md
+/release/LOCAL_REPOSITORY_GUARD.json
+/evidence/REPOSITORY_HANDOFF_R1.json

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "segments": 96,
+  "notes": "Invented unbranded teaching geometry, NOT any JR commercial SKU. No fit or food-contact claim.",
+  "parts": [
+    {
+      "id": "demo_bowl",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "tapered_bowl": {
+        "top_diameter_mm": 160,
+        "base_diameter_mm": 112,
+        "height_mm": 48,
+        "wall_thickness_mm": 1.2,
+        "floor_thickness_mm": 1.4
+      },
+      "position_mm": [0, 0, 0],
+      "color": [0.12, 0.15, 0.18]
+    },
+    {
+      "id": "demo_lid",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "section_rz_mm": [[0,8],[64,8],[64,6],[82,6],[82,0],[80.8,0],[80.8,4.8],[62.8,4.8],[62.8,6.8],[0,6.8]],
+      "position_mm": [0,0,58],
+      "color": [0.68,0.78,0.83]
+    }
+  ]
+}

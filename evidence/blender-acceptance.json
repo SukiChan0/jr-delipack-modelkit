@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "tested_on": "2026-09-24",
+  "status": "PASS",
+  "scope": "Synthetic recipe export and independent fresh-process Blender scene reopen",
+  "environment": {
+    "platform": "Windows",
+    "blender_version": "4.5.14 LTS",
+    "installation": "Existing official Microsoft Store installation",
+    "entry_point": "blender-launcher.exe",
+    "downloaded_or_installed_by_test": false
+  },
+  "method": {
+    "exports": "Run blender/export_scene.py for each recipe in a new background process and a new output directory.",
+    "launch_flags": [
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec"
+    ],
+    "reopen": "Open each generated scene.blend in another new background process, with UI loading and embedded script execution disabled.",
+    "independent_check": "Read actual mesh vertices, object transforms and editable source curves from the reopened Blender scene. Compare with original recipe dimensions and profiles without importing the geometry generator.",
+    "numeric_tolerance_mm": 0.0001,
+    "curve_edit_check": "Modify a source-curve point in memory, verify the change, then restore it without resaving the scene.",
+    "pass_evidence": "Actual scene files and fresh-process readback results, not the asynchronous launcher shell exit code."
+  },
+  "results": [
+    {
+      "recipe": "examples/demo_set.json",
+      "recipe_sha256": "15f3231b4545e6312c23e6afb8807d4fa5e886471447c8cfa7b55f108403320e",
+      "scene_sha256": "b9736b0b173122c5638d39d789daf53baa7933db5de20bb00f7b0738adc8a10a",
+      "status": "PASS",
+      "checks_passed": 31,
+      "checks_total": 31,
+      "mesh_count": 2,
+      "editable_source_curve_count": 2,
+      "parts": [
+        {
+          "id": "demo_bowl",
+          "vertices": 386,
+          "triangles": 768,
+          "expected_dimensions_mm": [160, 160, 48],
+          "actual_dimensions_mm": [159.9999964237213, 159.9999964237213, 48.00000041723251],
+          "expected_position_mm": [0, 0, 0],
+          "actual_position_mm": [0, 0, 0],
+          "source_profile_points": 6
+        },
+        {
+          "id": "demo_lid",
+          "vertices": 770,
+          "triangles": 1536,
+          "expected_dimensions_mm": [164, 164, 8],
+          "actual_dimensions_mm": [164.000004529953, 164.000004529953, 8.00000037997961],
+          "expected_position_mm": [0, 0, 58],
+          "actual_position_mm": [0, 0, 57.999998331069946],
+          "source_profile_points": 10
+        }
+      ]
+    },
+    {
+      "recipe": "examples/demo_custom_section.json",
+      "recipe_sha256": "d4a3b0c95b98a4282e5ed1d5c27cc2b9df21b8305d79533a5f72b47fe40742cf",
+      "scene_sha256": "050d46eefeb9990aef02814593a7e367e3be1efbd0551bcc5976bae948815698",
+      "status": "PASS",
+      "checks_passed": 18,
+      "checks_total": 18,
+      "mesh_count": 1,
+      "editable_source_curve_count": 1,
+      "parts": [
+        {
+          "id": "section_bowl",
+          "vertices": 514,
+          "triangles": 1024,
+          "expected_dimensions_mm": [136, 136, 40],
+          "actual_dimensions_mm": [136.00000739097595, 136.00000739097595, 39.99999910593033],
+          "expected_position_mm": [0, 0, 0],
+          "actual_position_mm": [0, 0, 0],
+          "source_profile_points": 10
+        }
+      ]
+    }
+  ],
+  "verified_properties": [
+    "Separate, correctly named mesh and source-profile objects",
+    "Metre vertex coordinates, metric scene units and millimetre UI display",
+    "Expected Z-up local bounds, explicit part translation and no extra scale or rotation",
+    "Triangulated meshes and expected source-status metadata",
+    "Cyclic POLY source curves preserving equivalent closed material-section boundaries",
+    "Editable source-curve coordinates, not only generated mesh geometry",
+    "Two incident faces per material mesh edge and positive signed material volume",
+    "No external image dependencies in the inspected scenes"
+  ],
+  "test_corrections": {
+    "exporter_source_fix_count": 0,
+    "test_harness_correction_rounds": 1,
+    "initial_set_result": "30/31: the checker initially treated an equivalent reversed closed profile as different.",
+    "correction": "Accept cyclic and reversed traversal of the same closed profile, matching the geometry validator's legitimate winding normalization.",
+    "model_changed_for_correction": false
+  },
+  "limits": {
+    "real_photo_accuracy": "NOT_TESTED",
+    "rendered_image_quality": "NOT_TESTED",
+    "gui_manual_editing_workflow": "NOT_TESTED",
+    "other_blender_versions": "NOT_TESTED",
+    "live_parametric_mesh_regeneration": "NOT_IMPLEMENTED",
+    "curve_visibility": "Source profiles are initially hidden from viewport and render; their editable datablocks were verified.",
+    "precision_interpretation": "Numeric tolerance checks preservation of synthetic input coordinates, not physical measurement accuracy.",
+    "engineering_interpretation": "Material topology and signed material volume do not certify container capacity, lid fit, leakage, manufacturing accuracy or food-contact safety.",
+    "scene_hash_interpretation": "Hashes identify the exact local acceptance artifacts; byte-identical regeneration of Blender scene files is not claimed."
+  },
+  "existing_gui_modified": false,
+  "production_system_changes": 0,
+  "public_remote_changes": 0
+}

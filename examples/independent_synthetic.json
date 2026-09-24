@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "segments": 80,
+  "notes": "Independent invented teaching fixture created for local audit. No commercial SKU, measurement, fit or capacity claim.",
+  "parts": [
+    {
+      "id": "audit_tall_bowl",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "tapered_bowl": {
+        "top_diameter_mm": 112,
+        "base_diameter_mm": 68,
+        "height_mm": 70,
+        "wall_thickness_mm": 1.7,
+        "floor_thickness_mm": 2.3
+      },
+      "position_mm": [175, -30, 4],
+      "color": [0.23, 0.44, 0.38]
+    },
+    {
+      "id": "audit_floating_ring",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "section_rz_mm": [[50, 0], [54, 0], [54, 3], [50, 3]],
+      "position_mm": [175, -30, 90]
+    },
+    {
+      "id": "audit_stepped_cap",
+      "source_status": "SYNTHETIC_EXAMPLE",
+      "section_rz_mm": [[0, 6], [45, 6], [45, 4], [58, 4], [58, 0], [56, 0], [56, 2], [43, 2], [43, 4], [0, 4]],
+      "position_mm": [175, -30, 105]
+    }
+  ]
+}

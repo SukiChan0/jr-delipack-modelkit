@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "segments": 96,
+  "parts": [
+    {
+      "id": "demo_bowl",
+      "section_rz_mm": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          56.0,
+          0.0
+        ],
+        [
+          80.0,
+          48.0
+        ],
+        [
+          78.65835921350012,
+          48.0
+        ],
+        [
+          55.35835921350013,
+          1.4
+        ],
+        [
+          0.0,
+          1.4
+        ]
+      ],
+      "position_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color": [
+        0.12,
+        0.15,
+        0.18
+      ],
+      "source_status": "SYNTHETIC_EXAMPLE"
+    },
+    {
+      "id": "demo_lid",
+      "section_rz_mm": [
+        [
+          0.0,
+          6.8
+        ],
+        [
+          62.8,
+          6.8
+        ],
+        [
+          62.8,
+          4.8
+        ],
+        [
+          80.8,
+          4.8
+        ],
+        [
+          80.8,
+          0.0
+        ],
+        [
+          82.0,
+          0.0
+        ],
+        [
+          82.0,
+          6.0
+        ],
+        [
+          64.0,
+          6.0
+        ],
+        [
+          64.0,
+          8.0
+        ],
+        [
+          0.0,
+          8.0
+        ]
+      ],
+      "position_mm": [
+        0.0,
+        0.0,
+        58.0
+      ],
+      "color": [
+        0.68,
+        0.78,
+        0.83
+      ],
+      "source_status": "SYNTHETIC_EXAMPLE"
+    }
+  ],
+  "notes": "Invented unbranded teaching geometry, NOT any JR commercial SKU. No fit or food-contact claim."
+}
