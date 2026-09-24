@@ -1,12 +1,22 @@
 # JR Delipack ModelKit
 
+## Star the project · Play the 3D experience
+
+**[⭐ Open the GitHub project and click Star](https://github.com/SukiChan0/jr-delipack-modelkit)** · **[🎮 Play the JR DELIPACK 3D Table](https://jrdelipack.com/wp-content/plugins/jr-delipack-v15-interactive/web/index.html)**
+
+朋友们：登录 GitHub 后，点击本仓库页面右上角的 **Star**，支持这个开源建模工具；点击上面的游戏链接，探索官网的独立 **3D 餐桌互动体验**。玩游戏不需要 GitHub 账号，也不需要先点 Star。
+
+If you find ModelKit useful, sign in to GitHub and click **Star** on this repository. To explore the separate JR DELIPACK brand experience, open the 3D table link above; no GitHub account or star is required.
+
+**Two separate experiences:** ModelKit is the open-source modelling toolkit in this repository. The 3D table is a separate JR DELIPACK brand experience, not a hosted version of ModelKit. Its game code and commercial product models are not included in this repository.
+
 **Local photo-assisted, profile-driven modelling for round containers and separate lids.**
 
 This alpha converts an explicit material half-section or a simple tapered-bowl recipe into an editable mesh. It includes a small local reference-tracing interface, a lightweight mesh viewer, OBJ/GLB export and an optional Blender scene adapter.
 
 Project background: [JR DELIPACK](https://jrdelipack.com/).
 
-This is a newly written standalone prototype, not an extract of the production JR DELIPACK website. The included objects are invented teaching examples, not R618, R948 or manufacturing drawings. No hosted demo or production deployment is included.
+This is a newly written standalone prototype, not an extract of the production JR DELIPACK website. The included objects are invented teaching examples, not R618, R948 or manufacturing drawings. No hosted ModelKit demo or ModelKit production deployment is included.
 
 ## What actually works in this release
 

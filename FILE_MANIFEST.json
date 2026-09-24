@@ -174,8 +174,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8345,
-      "sha256": "06f4423a8a813215f6b18be2ec1ae1367ad87196c07cfd8bb373b0fead03762a"
+      "bytes": 9373,
+      "sha256": "cf0552c5027ab8d21da5dc4b2a66cb93fd9b8b7a8be118f5acc22dc3339c1e54"
     },
     {
       "path": "release/PUBLIC_EXPORT_RULES.md",
