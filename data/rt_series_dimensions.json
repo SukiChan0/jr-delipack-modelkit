@@ -1,0 +1,41 @@
+{
+  "catalog_schema_version": 1,
+  "units": "mm",
+  "families": [{
+    "id": "RT_series",
+    "shape": "rectangular",
+    "source_status": "USER_ENTERED_MEASUREMENTS",
+    "source_note": "Numeric dimensions supplied by the project owner and transcribed for reuse. This source label records the owner's input; the open-source project has not independently measured physical samples.",
+    "verification_scope": "INPUT_DATA_ONLY_PHYSICAL_ACCURACY_NOT_VERIFIED",
+    "shared_lid": {
+      "id": "RT_shared_lid",
+      "dimensions_mm": {
+        "length_mm": 220, "width_mm": 151, "height_mm": 20,
+        "platform_length_mm": 190, "platform_width_mm": 118
+      }
+    },
+    "models": [
+      {"id": "RT68", "shared_lid_id": "RT_shared_lid", "dimensions_mm": {
+        "top_length_mm": 218, "top_width_mm": 149, "height_mm": 39, "cavity_depth_mm": 37,
+        "foot_length_mm": 175, "foot_width_mm": 108,
+        "bottom_panel_length_mm": 153, "bottom_panel_width_mm": 85
+      }},
+      {"id": "RT78", "shared_lid_id": "RT_shared_lid", "dimensions_mm": {
+        "top_length_mm": 218, "top_width_mm": 149, "height_mm": 45, "cavity_depth_mm": 43,
+        "foot_length_mm": 175, "foot_width_mm": 108,
+        "bottom_panel_length_mm": 153, "bottom_panel_width_mm": 85
+      }},
+      {"id": "RT88", "shared_lid_id": "RT_shared_lid", "dimensions_mm": {
+        "top_length_mm": 218, "top_width_mm": 149, "height_mm": 53, "cavity_depth_mm": 51,
+        "foot_length_mm": 175, "foot_width_mm": 108,
+        "bottom_panel_length_mm": 153, "bottom_panel_width_mm": 85
+      }}
+    ],
+    "display_assumptions": [
+      {"id": "RT_floor_thickness", "value_mm": 1, "description": "Conditional central floor thickness used for display modelling; not a measured material thickness."},
+      {"id": "RT_side_clearance", "value_mm": 0.3, "description": "Nominal per-side lid clearance used for display modelling; not a physical fit, sealing or retention-force result."},
+      {"id": "RT_floor_datum", "description": "Height minus cavity depth is 2 mm, the inner-floor height relative to the support plane. It is not the outer-bottom recess or the material thickness."},
+      {"id": "RT_photo_features", "description": "Corner radii, locking-channel section, skirt engagement, ribs and mark depths were visual assumptions. Those details and commercial meshes are not included in this numeric catalog."}
+    ]
+  }]
+}

@@ -28,9 +28,24 @@
       "sha256": "d6ddec824263ff4d76bb49b92c1191578fab1a9dbd79552d19a6ef2e182bdca9"
     },
     {
+      "path": "data/LICENSE.md",
+      "bytes": 814,
+      "sha256": "caca3ec8ff98e74d6637a8b7240ba5ea4769e70d99e41a7babac84a570b0bb49"
+    },
+    {
+      "path": "data/rt_series_dimensions.json",
+      "bytes": 2403,
+      "sha256": "8629e977c6244869ad40b75c6f95f60bfc7d5ec3fedac88c5c4b74137111b9f1"
+    },
+    {
       "path": "docs/ARCHITECTURE.md",
       "bytes": 1767,
       "sha256": "57e79978e83f57d88cacfa0a153101b2d235a8400d8789c9bd9f1dd2b35f5848"
+    },
+    {
+      "path": "docs/CATALOG_FORMAT.md",
+      "bytes": 3829,
+      "sha256": "95e2c709c59200b366f7b7963326fd195f6b01e52560157a5931a56a7e61622b"
     },
     {
       "path": "docs/INPUT_FORMAT.md",
@@ -56,6 +71,11 @@
       "path": "evidence/browser-acceptance.json",
       "bytes": 4122,
       "sha256": "8ebf85c348662fed467016ec2a44b2ad65cc9da26c0bfc8f20b91fef5d6a9954"
+    },
+    {
+      "path": "evidence/CATALOG_VALIDATION.md",
+      "bytes": 2024,
+      "sha256": "a02a53ce2fc892baa7cf8dc6b38cd22c9dc3cc06baa1330887d5e34d0a79dd1e"
     },
     {
       "path": "evidence/core-acceptance.json",
@@ -153,6 +173,11 @@
       "sha256": "d38ec22c6a0b79f346667add8cf34454ddd66a0d2963a73fb3c09510164d20e3"
     },
     {
+      "path": "jr_modelkit/catalog.py",
+      "bytes": 6397,
+      "sha256": "518ecf45e73a93c6a8e8a35e87170730678e8a1607e6d925960128872b0fb79c"
+    },
+    {
       "path": "jr_modelkit/exporters.py",
       "bytes": 3098,
       "sha256": "750135e8b0bd8ebbbab84167055e63dd3af5fe84795fe004cb90d54f3f71eee2"
@@ -174,8 +199,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9373,
-      "sha256": "cf0552c5027ab8d21da5dc4b2a66cb93fd9b8b7a8be118f5acc22dc3339c1e54"
+      "bytes": 10678,
+      "sha256": "3a11e5ead93d266461d1df89d76c222ff2246cdcb6d1f0a1d65d6a5acabb3a64"
     },
     {
       "path": "release/PUBLIC_EXPORT_RULES.md",
@@ -186,6 +211,11 @@
       "path": "SECURITY.md",
       "bytes": 1855,
       "sha256": "41a297faf89c805a92c57873ed771876014b01b8f46c537bcf95c6dc22aa638d"
+    },
+    {
+      "path": "tests/test_catalog.py",
+      "bytes": 7258,
+      "sha256": "5daf76fcf59ed7632a304697cf09a753a1eccb814839def79c84d76a567f7b59"
     },
     {
       "path": "tests/test_modelkit.py",
@@ -237,5 +267,7 @@
       "bytes": 7300,
       "sha256": "3326884a81bba35473b19c968fdebddbb678a414e3b4b719975327e636cd07f0"
     }
-  ]
+  ],
+  "catalog_schema_version": 1,
+  "numeric_catalog_license_scope": "data/LICENSE.md"
 }

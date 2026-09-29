@@ -16,7 +16,7 @@ This alpha converts an explicit material half-section or a simple tapered-bowl r
 
 Project background: [JR DELIPACK](https://jrdelipack.com/).
 
-This is a newly written standalone prototype, not an extract of the production JR DELIPACK website. The included objects are invented teaching examples, not R618, R948 or manufacturing drawings. No hosted ModelKit demo or ModelKit production deployment is included.
+This is a newly written standalone prototype, not an extract of the production JR DELIPACK website. The included meshes are invented teaching examples, not R618, R948 or manufacturing drawings. A separate numeric RT catalog records owner-supplied dimensions and display assumptions; it includes no commercial meshes. No hosted ModelKit demo or ModelKit production deployment is included.
 
 ## What actually works in this release
 
@@ -40,7 +40,7 @@ No automatic segmentation, texture extraction, arbitrary SVG import, snap-fit si
 
 ## Quick start — no third-party Python packages
 
-Use a separate directory and an existing Python 3.10+ installation. The current validation used Python 3.12.14 on Windows 11 and passed 39/39 core tests. Other Python versions and operating systems are not guaranteed by this run.
+Use a separate directory and an existing Python 3.10+ installation. Validation used Python 3.12.14 on Windows 11: the existing 39 core/export/audit tests and 12 catalog tests passed (51/51 total). See [catalog validation](evidence/CATALOG_VALIDATION.md) for the update's scope. Other Python versions and operating systems are not guaranteed by this run.
 
 From the repository root:
 
@@ -98,6 +98,26 @@ This adds `scene.blend`, including source section curves, in a new output folder
 
 ## Inputs, limits and architecture
 
+### Product-family display metadata
+
+The [RT dimension catalog](data/rt_series_dimensions.json) records RT68, RT78 and
+RT88 body dimensions with one shared lid. The independent catalog reader supports
+both round and rectangular families, retains the source and assumptions, and emits
+consistent rows for a site's model selector or dimension display:
+
+```bash
+python -m jr_modelkit.catalog data/rt_series_dimensions.json
+```
+
+This is validated metadata, not a rectangular 3D generator or a ready-made website
+integration. The existing geometry input and commands remain unchanged. The new
+reader checks data structure and references; it does not independently measure
+products or verify lid fit. See the [catalog contract](docs/CATALOG_FORMAT.md) and
+[data license scope](data/LICENSE.md). The supplied RT numeric measurements remain
+separate from the 1 mm floor and 0.3 mm side-clearance display assumptions.
+
+### Geometry inputs
+
 Read [input format](docs/INPUT_FORMAT.md), [architecture](docs/ARCHITECTURE.md) and [known limitations](docs/LIMITATIONS.md).
 
 The Python geometry is authoritative. The browser traces points and previews generated meshes; it does not maintain an independent competing geometry solver. Per-part position is an explicit visual transform, not inferred fit.
@@ -110,7 +130,7 @@ Do not open untrusted scripts or `.blend` files merely because a third party att
 
 ## Licensing
 
-Code and documentation in this standalone package use **GPL-3.0-or-later**, see [LICENSE](LICENSE); synthetic teaching input and derived meshes in `examples/` use **CC0-1.0**, see [examples/LICENSE.md](examples/LICENSE.md). No commercial product assets, logos, fonts, photographs, HDRIs or sound files are bundled.
+Code and documentation in this standalone package use **GPL-3.0-or-later**, see [LICENSE](LICENSE); synthetic teaching input and derived meshes in `examples/` use **CC0-1.0**, see [examples/LICENSE.md](examples/LICENSE.md). The owner-supplied numeric catalog is outside the synthetic examples; its structure and text follow [data/LICENSE.md](data/LICENSE.md). No commercial meshes, logos, fonts, photographs, HDRIs or sound files are bundled.
 
 The code license allows commercial reuse subject to its terms. It does not require an SEO backlink. User-created output is not automatically made GPL merely by running this tool; input and incorporated asset rights still matter.
 
